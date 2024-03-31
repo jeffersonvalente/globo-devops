@@ -63,6 +63,7 @@ resource "aws_instance" "my_ec2_instance" {
       "sudo apt-get install -y python3-pip",
       "sudo pip3 install gunicorn",
       "sudo pip3 install -r /opt/app/requirements.txt",
+      "cd /opt/app",
       "sudo gunicorn --log-level debug -b 0.0.0.0:8000 api:app" # Execute a aplicação em segundo plano
     ]
   }
