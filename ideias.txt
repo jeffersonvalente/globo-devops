@@ -1,0 +1,16 @@
+subir a infra na aws, usando terraform.
+durante a criação da ec2 posso usar o remote-exec para fazer as instalações necessarias.
+  - instalar agent do cloudwatch
+  - instalar guicorn e flask
+  - subir a aplicação diretamente com o ec2 usando remote-exec
+
+metricas interessantes para o cloudwatch
+  - High CPU
+  - High Memory
+  - High Network
+  - HTTP 5xx
+  - HTTP Response Time
+
+** preciso liberar a porta 22 e criar as chaves para o remote-exec funcionar, fazer via terraform.
+** fazer modular para ficar bonito
+** ec2, network, cloudwatch
