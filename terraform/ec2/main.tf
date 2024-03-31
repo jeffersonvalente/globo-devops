@@ -47,7 +47,7 @@ resource "aws_instance" "my_ec2_instance" {
   }
 
   provisioner "file" {
-    source      = "../app/"
+    source      = "app/"
     destination = "/opt/app"
     connection {
      type        = "ssh"
