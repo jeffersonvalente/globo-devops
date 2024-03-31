@@ -35,8 +35,5 @@ jobs:
     - name: Validate Terraform configuration
       run: terraform validate
 
-    - name: Plan Terraform changes
-      run: terraform plan -out=tfplan
-
     - name: Apply Terraform changes
       run: terraform apply -input=false tfplan
